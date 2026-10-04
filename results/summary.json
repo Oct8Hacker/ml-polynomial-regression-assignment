@@ -1,0 +1,271 @@
+{
+  "var1": {
+    "selected": {
+      "degree": 5,
+      "model": "lasso",
+      "alpha": 0.01,
+      "l1_ratio": null
+    },
+    "terms": 461,
+    "nonzero_coefficients": 111,
+    "training_rows": 1000,
+    "test_rows": 1000,
+    "final_selection_cv_mse": 0.3544824132440702,
+    "evaluation": {
+      "outer_folds": [
+        {
+          "fold": 1,
+          "selected": {
+            "degree": 5,
+            "model": "lasso",
+            "alpha": 0.01,
+            "l1_ratio": null
+          },
+          "inner_selection_mse": 0.3830014169313192,
+          "mse": 0.3463588849628691,
+          "r2": 0.9557897704526847
+        },
+        {
+          "fold": 2,
+          "selected": {
+            "degree": 5,
+            "model": "lasso",
+            "alpha": 0.01,
+            "l1_ratio": null
+          },
+          "inner_selection_mse": 0.4012607482196977,
+          "mse": 0.3439666237821488,
+          "r2": 0.9686929752537617
+        },
+        {
+          "fold": 3,
+          "selected": {
+            "degree": 5,
+            "model": "lasso",
+            "alpha": 0.01,
+            "l1_ratio": null
+          },
+          "inner_selection_mse": 0.3734976602650871,
+          "mse": 0.3431452487847093,
+          "r2": 0.9653605642768062
+        },
+        {
+          "fold": 4,
+          "selected": {
+            "degree": 5,
+            "model": "lasso",
+            "alpha": 0.01,
+            "l1_ratio": null
+          },
+          "inner_selection_mse": 0.37130553290833257,
+          "mse": 0.3484650680626328,
+          "r2": 0.964255743390175
+        },
+        {
+          "fold": 5,
+          "selected": {
+            "degree": 5,
+            "model": "lasso",
+            "alpha": 0.01,
+            "l1_ratio": null
+          },
+          "inner_selection_mse": 0.41302316551320933,
+          "mse": 0.3763453279207893,
+          "r2": 0.966254893518003
+        }
+      ],
+      "mean_outer_mse": 0.3516562307026299,
+      "std_outer_mse": 0.013958543800553504,
+      "mean_outer_r2": 0.964070789378286,
+      "std_outer_r2": 0.0049093766122113355,
+      "pooled_oof_mse": 0.35165623070262986,
+      "pooled_oof_r2": 0.9646217209223065
+    },
+    "invalid_candidates": 0,
+    "candidate_fold_fits": 3240,
+    "prediction_sha256": "82c8f89af21340f6820a8253f415b8f4ff5551d3bde934854ed4a885456d76ba",
+    "manifest": {
+      "config": {
+        "seed": 42,
+        "outer_folds": 5,
+        "inner_folds": 3,
+        "max_degrees": {
+          "1": 10,
+          "2": 20
+        },
+        "ridge_alphas": [
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "sparse_alphas": [
+          0.001,
+          0.01,
+          0.1,
+          1.0
+        ],
+        "l1_ratios": [
+          0.2,
+          0.8
+        ],
+        "max_iter": 20000,
+        "tol": 0.0001
+      },
+      "problem": 1,
+      "rollno": "BT2024151",
+      "train_sha256": "be162e1535b10e32c2aed73b5f64962b07f2aa44a85b29a331b33a1d4243f8a0",
+      "test_sha256": "575f33b4b525f712875b4d717428e7c536fa00cc837e2d55789322bf480a7988",
+      "implementation_sha256": "e75e9eae4b2525388e75487590a861c76b774afddf37386191148a9894571645",
+      "features": [
+        "x1",
+        "x2",
+        "x3",
+        "x4",
+        "x5",
+        "x6"
+      ],
+      "versions": {
+        "python": "3.14.7",
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "sklearn": "1.9.1"
+      }
+    }
+  },
+  "var2": {
+    "selected": {
+      "degree": 12,
+      "model": "elasticnet",
+      "alpha": 0.001,
+      "l1_ratio": 0.2
+    },
+    "terms": 454,
+    "nonzero_coefficients": 328,
+    "training_rows": 1000,
+    "test_rows": 1000,
+    "final_selection_cv_mse": 0.2466138617075022,
+    "evaluation": {
+      "outer_folds": [
+        {
+          "fold": 1,
+          "selected": {
+            "degree": 11,
+            "model": "ridge",
+            "alpha": 1.0,
+            "l1_ratio": null
+          },
+          "inner_selection_mse": 0.26119910245515787,
+          "mse": 0.2646834633784255,
+          "r2": 0.9946842490205583
+        },
+        {
+          "fold": 2,
+          "selected": {
+            "degree": 12,
+            "model": "elasticnet",
+            "alpha": 0.001,
+            "l1_ratio": 0.2
+          },
+          "inner_selection_mse": 0.2989575409698041,
+          "mse": 0.24573382334440708,
+          "r2": 0.996445549815395
+        },
+        {
+          "fold": 3,
+          "selected": {
+            "degree": 12,
+            "model": "elasticnet",
+            "alpha": 0.001,
+            "l1_ratio": 0.8
+          },
+          "inner_selection_mse": 0.28588878255276823,
+          "mse": 0.2502358058300753,
+          "r2": 0.9948726678383918
+        },
+        {
+          "fold": 4,
+          "selected": {
+            "degree": 12,
+            "model": "ridge",
+            "alpha": 1.0,
+            "l1_ratio": null
+          },
+          "inner_selection_mse": 0.27556546979482277,
+          "mse": 0.23821116951403382,
+          "r2": 0.995719270682646
+        },
+        {
+          "fold": 5,
+          "selected": {
+            "degree": 12,
+            "model": "elasticnet",
+            "alpha": 0.001,
+            "l1_ratio": 0.8
+          },
+          "inner_selection_mse": 0.26765060263564044,
+          "mse": 0.21523698339665492,
+          "r2": 0.9958390731858812
+        }
+      ],
+      "mean_outer_mse": 0.24282024909271932,
+      "std_outer_mse": 0.01819037998895357,
+      "mean_outer_r2": 0.9955121621085745,
+      "std_outer_r2": 0.0007272156537211691,
+      "pooled_oof_mse": 0.24282024909271935,
+      "pooled_oof_r2": 0.9955968277834334
+    },
+    "invalid_candidates": 0,
+    "candidate_fold_fits": 6480,
+    "prediction_sha256": "7dbbe318bf9cef77e9afa589da45e967449d6b3449b34941f2772e79c931e2ff",
+    "manifest": {
+      "config": {
+        "seed": 42,
+        "outer_folds": 5,
+        "inner_folds": 3,
+        "max_degrees": {
+          "1": 10,
+          "2": 20
+        },
+        "ridge_alphas": [
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0
+        ],
+        "sparse_alphas": [
+          0.001,
+          0.01,
+          0.1,
+          1.0
+        ],
+        "l1_ratios": [
+          0.2,
+          0.8
+        ],
+        "max_iter": 20000,
+        "tol": 0.0001
+      },
+      "problem": 2,
+      "rollno": "BT2024151",
+      "train_sha256": "0b344c105421339c0e43a3cc8a538c2194e6701d15ca55869b0c1304126c6bb8",
+      "test_sha256": "73d4d7c4a055c2b1c8e4849e0d8255b1d82c5eb4581a05274842f01072021f71",
+      "implementation_sha256": "e75e9eae4b2525388e75487590a861c76b774afddf37386191148a9894571645",
+      "features": [
+        "x1",
+        "x2",
+        "x3"
+      ],
+      "versions": {
+        "python": "3.14.7",
+        "numpy": "2.5.3",
+        "pandas": "3.0.6",
+        "sklearn": "1.9.1"
+      }
+    }
+  }
+}

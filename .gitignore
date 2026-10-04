@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.ipynb_checkpoints/
+.env
+.env.*
+Traning-testing-data/
+ML_Assignment_1.pdf
+artifacts/
+tmp/
+*.log
+*.joblib

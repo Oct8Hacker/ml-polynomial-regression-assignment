@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "max_degrees": {"1": 2, "2": 2},
+  "ridge_alphas": [0.1, 10.0],
+  "sparse_alphas": [0.01, 0.1],
+  "l1_ratios": [0.5],
+  "max_iter": 20000,
+  "tol": 0.0001
+}
