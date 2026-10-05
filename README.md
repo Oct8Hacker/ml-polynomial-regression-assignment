@@ -1,10 +1,5 @@
 # Polynomial regression assignment
 
-Training and inference code for BT2024151's two polynomial regression problems.
-The report will be written separately after the experiments are complete.
-
-## Completed full experiment
-
 The full configuration was run on both 1,000-row training datasets. These are
 **mean outer-fold validation scores**, not scores on the hidden test targets:
 
@@ -54,8 +49,6 @@ its original units. The supplied datasets are never modified.
   evaluate the untouched outer fold, and save predictions and MSE/R2.
 - **Final model:** repeat the inner search on all supplied training rows, then
   refit its winner on all rows. Outer results do not choose the final settings.
-- **Submission:** predict the supplied test inputs, preserving their row order.
-  Their true targets are hidden, so no test accuracy is claimed.
 
 The standard deviation across outer folds describes variation, not a formal
 confidence interval. Pooled out-of-fold R2 and average fold R2 are saved separately;
@@ -92,9 +85,6 @@ With `uv`, the equivalent install is:
 uv venv --python 3.14 .venv
 uv pip install --python .venv/Scripts/python.exe -r requirements-dev.txt
 ```
-
-Raw datasets and the assignment PDF are excluded from Git. The sample submission
-is retained to document the output schema.
 
 ## Run
 
@@ -147,12 +137,6 @@ artifacts/full/
     model.joblib                # fitted scalers, expansion, regressor, metadata
     search/                     # resumable inner searches and outer evaluations
 ```
-
-Each submission contains exactly one `y` column, one value per test row, and no
-index column, matching `sample_submission.csv`. Training verifies that reloading
-the saved model reproduces its predictions. All generated artifacts are excluded
-from Git by default; selected results can be summarized in the later report.
-
 If you want to regenerate predictions without training:
 
 ```powershell
