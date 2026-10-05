@@ -93,16 +93,6 @@ uv venv --python 3.14 .venv
 uv pip install --python .venv/Scripts/python.exe -r requirements-dev.txt
 ```
 
-Put the following files in `Traning-testing-data/` (the spelling matches the
-provided folder):
-
-```text
-BT2024151_train_var1.csv   # x1,x2,x3,x4,x5,x6,y
-BT2024151_test_var1.csv    # x1,x2,x3,x4,x5,x6
-BT2024151_train_var2.csv   # x1,x2,x3,y
-BT2024151_test_var2.csv    # x1,x2,x3
-```
-
 Raw datasets and the assignment PDF are excluded from Git. The sample submission
 is retained to document the output schema.
 
@@ -163,36 +153,9 @@ index column, matching `sample_submission.csv`. Training verifies that reloading
 the saved model reproduces its predictions. All generated artifacts are excluded
 from Git by default; selected results can be summarized in the later report.
 
-Regenerate predictions without training:
+If you want to regenerate predictions without training:
 
 ```powershell
 .venv\Scripts\python predict.py --model artifacts/full/var1/model.joblib --test Traning-testing-data/BT2024151_test_var1.csv --output artifacts/full/predictions/BT2024151_pred_var1.csv
 .venv\Scripts\python predict.py --model artifacts/full/var2/model.joblib --test Traning-testing-data/BT2024151_test_var2.csv --output artifacts/full/predictions/BT2024151_pred_var2.csv
 ```
-
-Load only model files you trust: joblib uses Python pickle internally.
-
-## Google Colab
-
-Use a CPU runtime initially. Clone this repository, install `requirements.txt`,
-and make the four CSV files available in `Traning-testing-data/`. A private
-repository requires authentication; do not put access tokens in saved notebook
-cells or committed code. Uploading a ZIP of the code is another option.
-
-```python
-%pip install -r requirements.txt
-!python train.py --config configs/full.json --output /content/drive/MyDrive/ML_Assignment_1/artifacts/full --jobs 2
-```
-
-The command assumes Drive is already mounted and the current directory contains
-the repository. Saving output to Drive preserves completed checkpoints if Colab
-disconnects. Do not run two jobs against the same output directory simultaneously.
-Use a separate output directory from a local run if Python or package versions differ.
-
-## GitHub
-
-The repository contains the implementation, fixed experiment configurations,
-dependency versions, tests, and usage instructions. It should remain private
-unless the course requires another access setting. Grant the evaluator access
-when submitting a private repository link. Do not commit `.venv`, raw datasets,
-credentials, or fitted model binaries.
